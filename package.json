@@ -1,0 +1,20 @@
+{
+  "name": "MMM-Horoscope",
+  "version": "1.0.0",
+  "description": "Horoscope Reader",
+  "main": "MMM-Horoscope.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bugsounet/MMM-Horoscope"
+  },
+  "author": "@bugsounet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bugsounet/MMM-Horoscope/issues"
+  },
+  "homepage": "https://github.com/bugsounet/MMM-Horoscope",
+  "dependencies": {
+    "feedme": "^2.0.1",
+    "request": "^2.88.2"
+  }
+}

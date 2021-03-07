@@ -1,0 +1,105 @@
+/* Magic Mirror
+ * Module: Horoscope
+ *
+ * By @bugsounet -- Dupont Cédric <bugsounet@bugsounet.fr>
+ * MIT Licensed.
+ */
+
+#HOROSCOPE_CONTENER {
+  line-height:1.1em;
+  width: 100%;
+  font-size: calc(2vh);
+  /*max-height: 800px;*/
+}
+
+#HOROSCOPE_CONTENER.showArticle {
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+#HOROSCOPE_CONTENER.hideArticle {
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+#HOROSCOPE_ARTICLE {
+  font-size: 90%;
+  display: flex;
+}
+
+#HOROSCOPE_CONTENT {
+  padding: 10px;
+  margin-top: 1px;
+  text-align: left;
+  height: 80px;
+  font-size: 80%;
+  display: inline-block;
+}
+
+#HOROSCOPE_LOGO {
+  max-width: 5vw;
+  max-height: 5vh;
+  text-align: left;
+  float: unset;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#HOROSCOPE_DESCRIPTION {
+  opacity: 0;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+#HOROSCOPE_DESCRIPTION.showArticle {
+  animation: 3s ease 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein{
+  0%   { opacity:0; }
+  66%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+#HOROSCOPE_DESCRIPTION.hideArticle {
+  opacity: 1;
+  animation: none;
+}
+
+#HOROSCOPE_TITLE {
+  margin-right: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 22px;
+}
+
+#HOROSCOPE_TITLE.start {
+  animation-duration: .8s;
+  animation-name: clignoter;
+  animation-iteration-count: 2;
+  transition: none;
+  animation-delay: 1s;
+}
+
+#HOROSCOPE_TITLE.stop {
+  animation-name: stopclignoter;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes clignoter {
+  0%   { opacity:1; }
+  40%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@keyframes stopclignoter {
+  0%   { opacity:1; }
+}
+
